@@ -1,3 +1,63 @@
+EJERCICIO 1.- Programa para determinar cuanto ahorrara una persona en un año, si al final de cada mes
+deposita variables cantidades de dinero; ademas, se requiere saber cuánto lleva ahorrado cada
+mes. 
+
+
+
+
+/*
+Practica 9                               Hernandez Sanchez Valeria Danaee
+fecha de entrega: 6 de diciembre de 2020
+*/
+
+/*Programa para determinar cuanto ahorrara una persona en un año, si al final de cada mes
+deposita variables cantidades de dinero; ademas, se requiere saber cuánto lleva ahorrado cada
+mes. */
+
+/*Declaracion de libreria*/
+#include<stdio.h>
+
+/*Declaracion de variables globales*/
+
+/*Declaracion de funcion principal*/
+int main()
+{
+	/*Declaracion de variables locales*/
+	int A,M,H,CONTADOR;
+	char op='n';
+	
+	/*Bloque de instrucciones*/
+	M=0;
+	A=0;
+	printf("\n\n\t\tRegistro de depositos para ahorro anual\n");
+	/*Arreglo para repetir la accion los doce meses*/
+	for(CONTADOR=1;CONTADOR<=12;CONTADOR++)
+	{
+		/*Estructura para pedir la cantidad depositada y 
+		preguntar si se van a hacer mas depositos en ese mes 
+		y sumar las cantidades para dar el total mensual*/
+		do {
+			printf("\n Depositos del mes %d :",CONTADOR);
+			printf("\n Ingrese la cantidad depositada:\t$");
+			scanf("%d",&H);
+			M=M+H;
+			printf("\n Desea hacer otro deposito S/N\t");
+			setbuf(stdin, NULL);
+			op=getchar();
+		}
+		while (op== 's'|| op=='S');
+		printf("\n\t\t La cantidad ahorrada el mes %d es: $%d\n\n",CONTADOR,M);
+		A=A+M;
+		M=0;
+	}
+	printf("\n\n El ahorro total anual es de: $%d",A);
+	return 0;
+}
+
+
+
+
+
 
 EJERCICIO 2.- Determinar de N cantidades cuantas son menores que cero, iguales a cero y mayores que cero.
 
