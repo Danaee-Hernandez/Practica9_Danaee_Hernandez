@@ -1,0 +1,35 @@
+
+
+EJERCICIO 3.- Generar e imprimir los numeros pares que se encuentran entre 0 y 100
+
+
+/*
+Practica 9                               Hernandez Sanchez Valeria Danaee
+fecha de entrega: 6 de diciembre de 2020
+*/
+
+/*Programa para Generar e imprimir los numeros pares que se encuentran entre 0 y 100*/
+
+/*Declaracion de libreria*/
+#include<stdio.h>
+
+/*Declaracion de variables globales*/
+
+/*Declaracion de funcion principal*/
+int main()
+{
+	/*Declaracion de variables locales*/
+	int x;
+	
+	/*Bloque de instrucciones*/
+	x=0;
+	printf("\n\n Los numeros pares que se encuentran entre el 0 y el 100 son:\n\n");
+	/*ciclo generador de numeros pares*/
+	while (x<=100)
+	{
+		printf("%d,\t",x);
+		x=x+2;
+	}
+	printf("\n\n\n");
+	return 0;
+}
